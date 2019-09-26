@@ -1,4 +1,5 @@
 def bubble_sort arr
+
     elem= arr.length 
 
     loop do 
@@ -6,7 +7,7 @@ def bubble_sort arr
         sorted = false #when to break the loop
 
         (elem-1).times do |x|
-            if arr[x] > arr[x+1] 
+            if arr[x] > arr[x+1]
                 arr[x], arr[x+1] = arr[x+1], arr[x]
             sorted = true
             end
@@ -14,13 +15,14 @@ def bubble_sort arr
 
         break if sorted == false
     end
-    arr
+    return arr
 end
 
 #test
-#puts y= [4,3,78,2,0,2]
-#puts bubble_sort(y)
+y= [4,3,78,2,0,2]
+puts bubble_sort(y) 
 
+=begin
 def bubble_sort_by arr
     elem= arr.length 
 
@@ -41,10 +43,10 @@ def bubble_sort_by arr
 end
    
 
- 
+
 bubble_sort_by(["hi","hello","hey"]) do |left,right|
 left.length - right.length
 end
 => ["hi", "hey", "hello"]
   
-
+=end
