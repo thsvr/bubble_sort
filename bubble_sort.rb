@@ -19,34 +19,29 @@ def bubble_sort arr
 end
 
 #test
-y= [4,3,78,2,0,2]
-puts bubble_sort(y) 
+#y= [4,3,78,2,0,2]
+#puts bubble_sort(y) 
 
-=begin
+
 def bubble_sort_by arr
     elem= arr.length 
 
-    loop do 
-
+    loop do
         sorted = false
-
         (elem-1).times do |x|
-            if yield(arr[x] > arr[x+1]).positive?
+            if yield(arr[x], arr[x+1]).negative?
                 arr[x], arr[x+1] = arr[x+1], arr[x]
             sorted = true
             end
         end
-
         break if sorted == false
     end
     arr
 end
    
 
+puts bubble_sort_by(["hi","hello","hey"]) {|left,right| left.length - right.length}
 
-bubble_sort_by(["hi","hello","hey"]) do |left,right|
-left.length - right.length
-end
-=> ["hi", "hey", "hello"]
+
+# ["hi", "hey", "hello"]
   
-=end
