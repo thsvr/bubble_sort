@@ -8,7 +8,7 @@ elem= arr.length
         if arr[x] > arr[x+1]
             arr[x], arr[x+1] = arr[x+1], arr[x]
             sorted= true
-            end
+        end
         end
         break if sorted == false
     end
@@ -26,7 +26,7 @@ elem= arr.length
         if yield(arr[x], arr[x+1]).negative?
             arr[x], arr[x+1] = arr[x+1], arr[x]
             sorted = true
-            end
+        end
         end
         break if sorted == false
     end
