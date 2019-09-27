@@ -5,7 +5,7 @@
 def bubble_sort(arr)
   elem = arr.length
   loop do
-    sorted = true # when to break the loop
+    sorted = true
 
     (elem - 1).times do |x|
       if arr[x] > arr[x + 1]
@@ -17,11 +17,6 @@ def bubble_sort(arr)
   end
   arr
 end
-
-# test
-y = [4, 3, 78, 2, 0, 2]
-puts bubble_sort(y)
-# output [0,2,2,3,4,78]
 
 # Assignment 2
 
@@ -40,7 +35,3 @@ def bubble_sort_by(arr)
   end
   arr
 end
-
-# test
-puts bubble_sort_by(%w[hi hello hey]) { |left, right| left.length - right.length }
-# output ["hi", "hey", "hello"]
