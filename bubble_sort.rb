@@ -23,7 +23,7 @@ elem= arr.length
     loop do
     sorted = false
         (elem-1).times do |x|
-        if yield(arr[x], arr[x+1]).negative?
+        if yield(arr[x], arr[x+1]).positive?
             arr[x], arr[x+1] = arr[x+1], arr[x]
             sorted = true
         end
