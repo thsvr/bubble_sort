@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Assignment 1
+
 def bubble_sort(arr)
   elem = arr.length
   loop do
@@ -19,6 +21,9 @@ end
 # test
 y = [4, 3, 78, 2, 0, 2]
 puts bubble_sort(y)
+# output [0,2,2,3,4,78]
+
+# Assignment 2
 
 def bubble_sort_by(arr)
   elem = arr.length
@@ -36,5 +41,6 @@ def bubble_sort_by(arr)
   arr
 end
 
+# test
 puts bubble_sort_by(%w[hi hello hey]) { |left, right| left.length - right.length }
-# ["hi", "hey", "hello"]
+# output ["hi", "hey", "hello"]
